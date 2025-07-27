@@ -1,81 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../config/supabaseClient";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./DisclosureList.css";
 
 const DisclosureList = () => {
   const navigate = useNavigate();
+  const [disclosures, setDisclosures] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  // Sample disclosure data
-  const disclosures = [
-    {
-      id: 1,
-      title: "2024년 4분기 재무제표 공시",
-      date: "2024.12.31",
-      fileType: "PDF",
-      content:
-        "2024년 4분기의 재무제표를 공시합니다. 이번 분기의 수익, 비용, 자산, 부채 내역 등을 포함하고 있습니다.",
-    },
-    {
-      id: 2,
-      title: "주요 투자 결정 사항 공시",
-      date: "2024.11.15",
-      fileType: "PDF",
-      content:
-        "당사는 2024년 11월 주요 부동산 투자 결정을 내렸으며, 해당 내용의 세부 사항을 공시합니다.",
-    },
-    {
-      id: 3,
-      title: "정기 주주총회 소집 공고",
-      date: "2024.10.20",
-      fileType: "PDF",
-      content:
-        "정기 주주총회가 2024년 10월 30일에 개최될 예정이며, 안건 및 장소 등의 세부 정보를 안내드립니다.",
-    },
-    {
-      id: 4,
-      title: "신규 부동산 투자 계획 발표",
-      date: "2024.09.05",
-      fileType: "PDF",
-      content:
-        "2025년을 대비한 신규 부동산 투자 계획을 수립하였으며, 투자 대상 및 기대 수익률을 포함한 내용을 안내드립니다.",
-    },
-    {
-      id: 5,
-      title: "3분기 경영실적 보고서",
-      date: "2024.08.30",
-      fileType: "PDF",
-      content:
-        "2024년 3분기 경영 실적을 보고합니다. 매출 및 영업이익, 당기순이익 등 주요 지표를 포함합니다.",
-    },
-    {
-      id: 6,
-      title: "임원 인사 변경 공시",
-      date: "2024.07.12",
-      fileType: "PDF",
-      content:
-        "임원 인사에 대한 변경 사항을 공시합니다. 신규 선임 및 사임 관련 내용을 포함합니다.",
-    },
-    {
-      id: 7,
-      title: "신규 감사 선임 공시",
-      date: "2024.07.10",
-      fileType: "PDF",
-      content:
-        "신규 감사 선임에 관한 공시입니다. 감사의 이력과 임기, 선임 배경 등을 포함합니다.",
-    },
-    {
-      id: 8,
-      title: "본사 이전 안내 공시",
-      date: "2024.07.01",
-      fileType: "PDF",
-      content:
-        "본사의 사무실 이전이 확정되어 관련 정보를 공시합니다. 이전 일정과 주소 등을 안내드립니다.",
-    },
-  ];
+  // 🔍 Supabase에서 공시사항 조회
+  useEffect(() => {
+    const fetchDisclosures = async () => {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from("disclosure")
+        .select("*")
+        .order("date", { ascending: false }); // 최신순 정렬
+
+      if (error) {
+        console.error("공시사항 불러오기 실패:", error.message);
+      } else {
+        setDisclosures(data);
+      }
+
+      setLoading(false);
+    };
+
+    fetchDisclosures();
+  }, []);
 
   const totalPages = Math.ceil(disclosures.length / itemsPerPage);
   const paginatedDisclosures = disclosures.slice(
@@ -146,7 +102,7 @@ const DisclosureList = () => {
                   <div className="item-cell date-cell">{disclosure.date}</div>
                   <div className="item-cell type-cell">
                     <div className="file-type">
-                      <svg
+                      {/* <svg
                         className="file-icon"
                         width="16"
                         height="16"
@@ -188,8 +144,8 @@ const DisclosureList = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
-                      </svg>
-                      <span className="file-type-text">{disclosure.fileType}</span>
+                      </svg> */}
+                      <span className="file-type-text">{disclosure.file_type}</span>
                     </div>
                   </div>
                 </div>
