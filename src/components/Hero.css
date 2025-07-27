@@ -1,0 +1,96 @@
+.hero-section {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  padding: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/home/heroBg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  position: relative;
+}
+
+.hero-title {
+  align-self: stretch;
+  color: #1e293b;
+  text-align: center;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57.6px;
+  position: relative;
+}
+
+.hero-subtitle {
+  align-self: stretch;
+  color: #64748b;
+  text-align: center;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  position: relative;
+}
+
+.hero-cta {
+  display: flex;
+  width: 200px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #1e3a8a;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hero-cta:hover {
+  background: #1e40af;
+}
+
+.cta-text {
+  color: #fff;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.2px;
+  position: relative;
+}

@@ -1,0 +1,77 @@
+.team-member {
+  display: flex;
+  width: 360px;
+  height: 400px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+}
+
+.member-photo {
+  display: flex;
+  width: 120px;
+  height: 140px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: #e2e8f0;
+}
+
+.member-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.member-name {
+  align-self: stretch;
+  color: #1e293b;
+  text-align: center;
+  font: 700 20px/24px Inter;
+  margin: 0;
+}
+
+.member-position {
+  align-self: stretch;
+  color: #1e3a8a;
+  text-align: center;
+  font: 700 14px/16.8px Inter;
+}
+
+.member-description {
+  align-self: stretch;
+  color: #64748b;
+  text-align: center;
+  font: 400 14px/16.8px Inter;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .team-member {
+    width: calc(50% - 20px);
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-member {
+    width: 100%;
+    max-width: 360px;
+  }
+}
