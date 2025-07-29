@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../config/supabaseClient";
 import { useNavigate } from "react-router-dom";
 import { useLocation, useParams } from "react-router-dom";
 import Header from "../components/Header";
@@ -10,7 +11,27 @@ const DisclosureDetail = () => {
   const location = useLocation();
   const { id } = useParams();
 
-  const disclosure = location.state;
+  // const disclosure = location.state;
+  const [disclosure, setDisclosure] = useState(location.state || null);
+  useEffect(() => {
+    const fetchDisclosure = async () => {
+      if (!disclosure && id) {
+        const { data, error } = await supabase
+          .from("disclosure")
+          .select("*")
+          .eq("id", id)
+          .single();
+
+        if (error) {
+          console.error("공시 상세 불러오기 실패:", error.message);
+        } else {
+          setDisclosure(data);
+        }
+      }
+    };
+
+    fetchDisclosure();
+  }, [id, disclosure]);
 
   if (!disclosure) {
     return <div>잘못된 접근입니다. 리스트에서 항목을 클릭해주세요.</div>;
@@ -20,9 +41,18 @@ const DisclosureDetail = () => {
     navigate("/disclosures");
   };
 
-  const handleDownload = () => {
-    // Handle file download logic here
-    console.log("Downloading file: 재무제표_2024Q4.pdf");
+  const handleDownload = async () => {
+    if (!disclosure.file_path || !disclosure.file_name || !disclosure.file_type) return;
+    const filePath = `${disclosure.file_path}${disclosure.file_name}.${disclosure.file_type.toLowerCase()}`;
+    const { data, error } = supabase.storage
+      .from("buying-freedom")       // 버킷 이름
+      .getPublicUrl(filePath);      // 파일 경로
+
+    if (error) {
+      console.error(error);
+    } else {
+      window.open(data.publicUrl, "_blank");  // 새 창 열기 (다운로드 혹은 뷰어)
+    }
   };
 
   return (
@@ -183,40 +213,47 @@ const DisclosureDetail = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="file-text">첨부파일: {disclosure.title.replace(/\s/g, "_")}.pdf</span>
+                {/* <span className="file-text">첨부파일: {disclosure.title.replace(/\s/g, "_")}.pdf</span> */}
+                <span className="file-text">
+                  첨부파일: {disclosure.file_name && disclosure.file_type
+                    ? `${disclosure.file_name}.${disclosure.file_type.toLowerCase()}`
+                    : "없음"}
+                </span>
               </div>
-              <button className="download-button" onClick={handleDownload}>
-                <svg
-                  className="download-icon"
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                >
-                  <path
-                    d="M8.5 10V2"
-                    stroke="white"
-                    strokeWidth="1.33333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M14.5 10V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V10"
-                    stroke="white"
-                    strokeWidth="1.33333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M5.16669 6.66699L8.50002 10.0003L11.8334 6.66699"
-                    stroke="white"
-                    strokeWidth="1.33333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="download-text">파일 다운로드</span>
-              </button>
+              {disclosure.file_name && disclosure.file_type && (
+                <button className="download-button" onClick={handleDownload}>
+                  <svg
+                    className="download-icon"
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M8.5 10V2"
+                      stroke="white"
+                      strokeWidth="1.33333"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M14.5 10V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V10"
+                      stroke="white"
+                      strokeWidth="1.33333"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M5.16669 6.66699L8.50002 10.0003L11.8334 6.66699"
+                      stroke="white"
+                      strokeWidth="1.33333"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="download-text">파일 다운로드</span>
+                </button>
+              )}
             </div>
           </div>
           <div className="divider"></div>

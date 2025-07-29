@@ -32,7 +32,7 @@ const Header = () => {
           <div className="nav-item" onClick={() => handleNavigation("/team")}>
             구성원 소개
           </div>
-          <div className="nav-item">주요업무</div>
+          <div className="nav-item" onClick={() => handleNavigation("/businesses")}>주요업무</div>
           <div className="nav-item">프로젝트</div>
           <div
             className="nav-item"

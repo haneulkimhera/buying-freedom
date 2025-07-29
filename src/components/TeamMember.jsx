@@ -13,7 +13,6 @@ const TeamMember = ({ name, position, description }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M48 48H0V0H48V48Z" stroke="#94A3B8"></path>
           <path
             d="M38 42V38C38 35.8783 37.1571 33.8434 35.6569 32.3431C34.1566 30.8429 32.1217 30 30 30H18C15.8783 30 13.8434 30.8429 12.3431 32.3431C10.8429 33.8434 10 35.8783 10 38V42"
             stroke="#94A3B8"
