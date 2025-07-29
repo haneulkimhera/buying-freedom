@@ -161,7 +161,81 @@ const Services = () => {
             </ServiceIcon>
           </IconContainer>
           <CardContent>
-            <CardTitle>부동산 개발</CardTitle>
+            <CardTitle>부동산 개발 및 운용</CardTitle>
+            <CardDescription>example</CardDescription>
+          </CardContent>
+        </ServiceCard>
+        <ServiceCard>
+          <IconContainer bg="#eef2ff">
+            <ServiceIcon
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 2.6665H8.00004C6.52728 2.6665 5.33337 3.86041 5.33337 5.33317V26.6665C5.33337 28.1393 6.52728 29.3332 8.00004 29.3332H24C25.4728 29.3332 26.6667 28.1393 26.6667 26.6665V5.33317C26.6667 3.86041 25.4728 2.6665 24 2.6665Z"
+                stroke="#1E3A8A"
+                strokeWidth="2.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M12 29.3333V24H20V29.3333"
+                stroke="#1E3A8A"
+                strokeWidth="2.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path d="M10.6666 8H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 8H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 8H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 13.3335H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 18.6665H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 13.3335H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 18.6665H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M10.6666 13.3335H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M10.6666 18.6665H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+            </ServiceIcon>
+          </IconContainer>
+          <CardContent>
+            <CardTitle>프롭테크 솔루션 개발</CardTitle>
+            <CardDescription>example</CardDescription>
+          </CardContent>
+        </ServiceCard>
+        <ServiceCard>
+          <IconContainer bg="#eef2ff">
+            <ServiceIcon
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 2.6665H8.00004C6.52728 2.6665 5.33337 3.86041 5.33337 5.33317V26.6665C5.33337 28.1393 6.52728 29.3332 8.00004 29.3332H24C25.4728 29.3332 26.6667 28.1393 26.6667 26.6665V5.33317C26.6667 3.86041 25.4728 2.6665 24 2.6665Z"
+                stroke="#1E3A8A"
+                strokeWidth="2.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M12 29.3333V24H20V29.3333"
+                stroke="#1E3A8A"
+                strokeWidth="2.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path d="M10.6666 8H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 8H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 8H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 13.3335H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M16 18.6665H16.0133" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 13.3335H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M21.3334 18.6665H21.3467" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M10.6666 13.3335H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+              <path d="M10.6666 18.6665H10.68" stroke="#1E3A8A" strokeWidth="2.66667" />
+            </ServiceIcon>
+          </IconContainer>
+          <CardContent>
+            <CardTitle>라이프스타일 숙소 비즈니스</CardTitle>
             <CardDescription>example</CardDescription>
           </CardContent>
         </ServiceCard>

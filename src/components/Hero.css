@@ -31,7 +31,8 @@
 
 .hero-title {
   align-self: stretch;
-  color: #1e293b;
+  /* color: #1e293b; */
+  color: #ffffff;
   text-align: center;
   font-family:
     Inter,
@@ -48,7 +49,8 @@
 
 .hero-subtitle {
   align-self: stretch;
-  color: #64748b;
+  /* color: #64748b; */
+  color: #ffffff;
   text-align: center;
   font-family:
     Inter,
