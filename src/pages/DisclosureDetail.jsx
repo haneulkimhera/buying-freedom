@@ -41,6 +41,11 @@ const DisclosureDetail = () => {
     navigate("/disclosures");
   };
 
+  const isImageFile = (fileType) => {
+    if (!fileType) return false;
+    return ["jpg", "jpeg", "png", "gif"].includes(fileType.toLowerCase());
+  };
+
   const handleDownload = async () => {
     if (!disclosure.file_path || !disclosure.file_name || !disclosure.file_type) return;
     const filePath = `${disclosure.file_path}${disclosure.file_name}.${disclosure.file_type.toLowerCase()}`;
@@ -265,6 +270,19 @@ const DisclosureDetail = () => {
             <p className="content-text">
               {disclosure.content}
             </p>
+
+            {isImageFile(disclosure.file_type) && disclosure.file_path && disclosure.file_name && (
+              <div className="image-preview">
+                <img
+                  src={supabase.storage
+                    .from("buying-freedom")
+                    .getPublicUrl(`${disclosure.file_path}${disclosure.file_name}.${disclosure.file_type.toLowerCase()}`)
+                    .data.publicUrl}
+                  alt={disclosure.file_name}
+                  style={{ maxWidth: "100%", marginTop: "1rem", borderRadius: "8px" }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
