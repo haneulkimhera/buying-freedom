@@ -2,6 +2,9 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TeamMember from "../components/TeamMember";
+import ceoProfile from "../assets/team/ceo_profile.png";
+import member1Profile from "../assets/team/member_profile.jpeg";
+import CheckIcon from "../components/CheckIcon";
 import "./Team.css";
 
 const Team = () => {
@@ -30,130 +33,44 @@ const Team = () => {
         <div className="ceo-profile">
           <div className="ceo-photo-container">
             <div className="photo-frame">
-              <svg
-                className="user-icon"
-                width="80"
-                height="80"
-                viewBox="0 0 80 80"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M63.3334 70V63.3333C63.3334 59.7971 61.9286 56.4057 59.4281 53.9052C56.9276 51.4048 53.5362 50 50 50H30C26.4638 50 23.0724 51.4048 20.5719 53.9052C18.0714 56.4057 16.6667 59.7971 16.6667 63.3333V70"
-                  stroke="#94A3B8"
-                  strokeWidth="6.66667"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-                <path
-                  d="M40 36.6667C47.3638 36.6667 53.3334 30.6971 53.3334 23.3333C53.3334 15.9695 47.3638 10 40 10C32.6362 10 26.6667 15.9695 26.6667 23.3333C26.6667 30.6971 32.6362 36.6667 40 36.6667Z"
-                  stroke="#94A3B8"
-                  strokeWidth="6.66667"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
+              <img src={ceoProfile} alt="대표 프로필" className="ceo-photo"/>
             </div>
-            <div className="ceo-name">000 대표이사</div>
+            <div className="ceo-name">김형필 대표</div>
           </div>
           <div className="ceo-info">
             <div className="ceo-details">
               <div className="name-and-title">
-                <h3 className="ceo-full-name">이름</h3>
+                <h3 className="ceo-full-name">김형필</h3>
                 <div className="ceo-title">대표이사 / CEO</div>
               </div>
               <div className="quote-section">
-                <p className="ceo-quote">"소개말"</p>
+                <p className="ceo-quote">"시간의 자유를 찾아서"</p>
               </div>
               <div className="experience">
                 <h4 className="experience-title">주요 경력</h4>
                 <div className="experience-list">
                   <div className="experience-item">
-                    <svg
-                      className="check-icon"
-                      width="16"
-                      height="17"
-                      viewBox="0 0 16 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 16.5H0V0.5H16V16.5Z" stroke="#10B981"></path>
-                      <path
-                        d="M13.3334 4.5L6.00002 11.8333L2.66669 8.5"
-                        stroke="#10B981"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+                    <CheckIcon className="check-icon" />
                     <span className="experience-text">
                       부동산 개발 및 투자 15년 경력
                     </span>
                   </div>
                   <div className="experience-item">
-                    <svg
-                      className="check-icon"
-                      width="16"
-                      height="17"
-                      viewBox="0 0 16 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 16.5H0V0.5H16V16.5Z" stroke="#10B981"></path>
-                      <path
-                        d="M13.3334 4.5L6.00002 11.8333L2.66669 8.5"
-                        stroke="#10B981"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+                    <CheckIcon className="check-icon" />
                     <span className="experience-text">
                       강남권 프리미엄 부동산 전문
                     </span>
                   </div>
                   <div className="experience-item">
-                    <svg
-                      className="check-icon"
-                      width="16"
-                      height="17"
-                      viewBox="0 0 16 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 16.5H0V0.5H16V16.5Z" stroke="#10B981"></path>
-                      <path
-                        d="M13.3334 4.5L6.00002 11.8333L2.66669 8.5"
-                        stroke="#10B981"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+                    <CheckIcon className="check-icon" />
                     <span className="experience-text">
-                      공인중개사, 감정평가사 자격 보유
+                      창원 메트로병원장
                     </span>
                   </div>
                   <div className="experience-item">
-                    <svg
-                      className="check-icon"
-                      width="16"
-                      height="17"
-                      viewBox="0 0 16 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 16.5H0V0.5H16V16.5Z" stroke="#10B981"></path>
-                      <path
-                        d="M13.3334 4.5L6.00002 11.8333L2.66669 8.5"
-                        stroke="#10B981"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+                    <CheckIcon className="check-icon" />
                     <span className="experience-text">
-                      공인중개사, 감정평가사 자격 보유
+                      영상의학과 전문의
                     </span>
                   </div>
                 </div>
@@ -173,15 +90,13 @@ const Team = () => {
         </div>
         <div className="team-grid">
           <div className="team-row">
-            <TeamMember name="이름" position="직무" description="소개말" />
-            <TeamMember name="이름" position="직무" description="소개말" />
-            <TeamMember name="이름" position="직무" description="소개말" />
+            <TeamMember name="이시환" position="이사" description="이사 이시환 " photo={member1Profile}/>
           </div>
-          <div className="team-row">
+          {/* <div className="team-row">
             <TeamMember name="이름" position="직무" description="소개말" />
             <TeamMember name="이름" position="직무" description="소개말" />
             <TeamMember name="이름" position="직무" description="소개말" />
-          </div>
+          </div> */}
         </div>
       </div>
 

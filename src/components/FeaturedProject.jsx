@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeaturedProject.css";
+import projectThumbnail from "../assets/home/project_thumbnail.png";
 
 const FeaturedProject = () => {
   return (
@@ -12,40 +13,11 @@ const FeaturedProject = () => {
       </div>
       <div className="project-content">
         <div className="project-image">
-          <svg
-            className="image-icon"
-            width="64"
-            height="64"
-            viewBox="0 0 64 64"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M50.6667 8H13.3333C10.3878 8 8 10.3878 8 13.3333V50.6667C8 53.6122 10.3878 56 13.3333 56H50.6667C53.6122 56 56 53.6122 56 50.6667V13.3333C56 10.3878 53.6122 8 50.6667 8Z"
-              stroke="#94A3B8"
-              strokeWidth="5.33333"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M24 29.3332C26.9455 29.3332 29.3334 26.9454 29.3334 23.9998C29.3334 21.0543 26.9455 18.6665 24 18.6665C21.0545 18.6665 18.6667 21.0543 18.6667 23.9998C18.6667 26.9454 21.0545 29.3332 24 29.3332Z"
-              stroke="#94A3B8"
-              strokeWidth="5.33333"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M56 39.9998L47.7707 31.7705C46.7705 30.7707 45.4142 30.209 44 30.209C42.5858 30.209 41.2295 30.7707 40.2293 31.7705L16 55.9998"
-              stroke="#94A3B8"
-              strokeWidth="5.33333"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <img src={projectThumbnail} alt="프로젝트 썸네일" className="project-thumbnail"/>
         </div>
         <div className="project-info">
           <div className="project-details">
-            <div className="project-title">프리미엄 오피스 빌딩</div>
+            <div className="project-title">프리미엄 오피스 빌딩 "The 853"</div>
             <div className="project-description">
               서울 서초구에 위치한 최신 오피스 빌딩으로, 현대적인 시설과 편리한
               교통 접근성을 자랑합니다. 총 5층 규모로 다양한 규모의 기업에
@@ -76,7 +48,7 @@ const FeaturedProject = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <div className="stat-text">입주율 95% 달성</div>
+                <div className="stat-text">반포 세무서 인접</div>
               </div>
               <div className="stat-item">
                 <svg
@@ -102,7 +74,7 @@ const FeaturedProject = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <div className="stat-text">지하철역 도보 3분</div>
+                <div className="stat-text">내방역 도보 5분</div>
               </div>
               <div className="stat-item">
                 <svg
@@ -128,7 +100,7 @@ const FeaturedProject = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <div className="stat-text">24시간 보안 시스템</div>
+                <div className="stat-text">래미안 원페를라 아파트 앞</div>
               </div>
             </div>
           </div>
