@@ -1,0 +1,23 @@
+// CheckIcon.js
+import React from "react";
+
+const CheckIcon = ({ className }) => (
+  <svg
+    className={className}
+    width="16"
+    height="17"
+    viewBox="0 0 16 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M13.3334 4.5L6.00002 11.8333L2.66669 8.5"
+      stroke="#10B981"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export default CheckIcon;

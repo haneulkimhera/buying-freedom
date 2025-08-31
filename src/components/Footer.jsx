@@ -167,7 +167,7 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="contact-text">02-1234-5678</div>
+              <div className="contact-text">010-3284-0425</div>
             </div>
             <div className="contact-item">
               <svg
@@ -193,7 +193,7 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="contact-text">info@buyingfreedom.co.kr</div>
+              <div className="contact-text">mdkhp@naver.com</div>
             </div>
           </div>
         </div>

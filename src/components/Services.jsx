@@ -120,11 +120,9 @@ const Services = () => {
         <ServicesTitle>기업 소개</ServicesTitle>
         <ServicesDescription>
           주식회사 시간을 사는 사람들은 가치 대비 저평가되어 있는 자산을 찾아
-          개발행위를 통하여 자산을 증식시키고 이렇게 증가된 자산을 이용하여 더
-          나은 투자처를 발굴하는 활동을 영위합니다. 주로 투자가치가 높은 강남권의
-          숨어있는 알짜 부동산을 매입하여 사업을 진행합니다. 부동산 뿐 아니라
-          부동산, 증권, 지적재산, 자문, F&B 등 가치가 있는 모든 대상이 저희들의
-          사업 대상 입니다.
+          개발행위를 통하여 자산을 증식시키고 더 나은 투자처를 발굴하는 활동을 영위합니다.
+          주로 투자가치가 높은 강남권의 숨어있는 알짜 부동산을 매입하여 사업을 진행합니다. 부동산 뿐 아니라
+          부동산, 증권, 지적재산, 자문, F&B 등 가치가 있는 모든 대상이 저희들의 사업 대상 입니다.
         </ServicesDescription>
       </ServicesHeader>
       <ServicesRow>
@@ -162,7 +160,7 @@ const Services = () => {
           </IconContainer>
           <CardContent>
             <CardTitle>부동산 개발 및 운용</CardTitle>
-            <CardDescription>example</CardDescription>
+            <CardDescription>입지 분석부터 개발, 임대를 아우르는 종합 부동산 투자·개발 사업을 전개합니다.</CardDescription>
           </CardContent>
         </ServiceCard>
         <ServiceCard>
@@ -199,7 +197,7 @@ const Services = () => {
           </IconContainer>
           <CardContent>
             <CardTitle>프롭테크 솔루션 개발</CardTitle>
-            <CardDescription>example</CardDescription>
+            <CardDescription>부동산 시장의 효율성과 투명성을 높이는 데이터 기반 플랫폼 및 기술 솔루션을 개발합니다.</CardDescription>
           </CardContent>
         </ServiceCard>
         <ServiceCard>
@@ -236,7 +234,7 @@ const Services = () => {
           </IconContainer>
           <CardContent>
             <CardTitle>라이프스타일 숙소 비즈니스</CardTitle>
-            <CardDescription>example</CardDescription>
+            <CardDescription>단기임대 중심의 공간을 기획·운영하며, 지역의 매력을 반영한 숙박 경험을 제공합니다.</CardDescription>
           </CardContent>
         </ServiceCard>
       </ServicesRow>
