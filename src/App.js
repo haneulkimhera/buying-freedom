@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import DisclosureList from "./pages/DisclosureList";
 import DisclosureDetail from "./pages/DisclosureDetail";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/disclosures" element={<DisclosureList />} />
           <Route path="/disclosure/:id" element={<DisclosureDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </div>
