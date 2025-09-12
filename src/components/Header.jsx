@@ -43,7 +43,9 @@ const Header = () => {
           <div className="nav-item" onClick={() => handleNavigation("/contact")}>
             오시는 길
           </div>
-          <div className="nav-item">갤러리</div>
+          <div className="nav-item"onClick={() => handleNavigation("/gallery")}>
+            갤러리
+          </div>
         </nav>
         <div className="contact-button">
           <span className="contact-text">문의하기</span>
