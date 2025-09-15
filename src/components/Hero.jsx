@@ -1,7 +1,14 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="hero-section">
       <div className="hero-content">
@@ -13,7 +20,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-cta">
-          <span className="cta-text">프로젝트 보기</span>
+          <span className="cta-text" onClick={() => handleNavigation("/projects")}>프로젝트 보기</span>
         </div>
       </div>
     </div>

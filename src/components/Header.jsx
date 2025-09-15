@@ -47,9 +47,6 @@ const Header = () => {
             갤러리
           </div>
         </nav>
-        <div className="contact-button">
-          <span className="contact-text">문의하기</span>
-        </div>
       </div>
     </div>
   );
