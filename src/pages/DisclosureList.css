@@ -471,7 +471,16 @@
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
+  .header-cell {
+    width: auto;
+    flex: 1; /* 각 셀이 같은 비율로 공간 차지 */
+  }
+
+  .title-header {
+    flex: 2; /* 제목은 조금 더 넓게 */
+  }
+
   .item-row {
     flex-direction: column;
     gap: 8px;
