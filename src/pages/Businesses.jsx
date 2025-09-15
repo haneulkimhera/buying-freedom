@@ -4,6 +4,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 
+import business11 from "../assets/businesses/business1-1.png";
+import business12 from "../assets/businesses/business1-2.png";
+import business13 from "../assets/businesses/business1-3.jpeg";
+import business21 from "../assets/businesses/business2-1.png";
+import business22 from "../assets/businesses/business2-2.png";
+import business31 from "../assets/businesses/business3-1.png";
+import business32 from "../assets/businesses/business3-2.png";
+import business41 from "../assets/businesses/business4-1.png";
+import business42 from "../assets/businesses/business4-2.png";
+
 function Businesses() {
   const navigate = useNavigate();
 
@@ -65,20 +75,16 @@ function Businesses() {
             <ImageSlider>
               <SliderContainer>
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/2bf145e56026a10ba3dc7e88b864fc3be49ef843?width=720"
+                  src={business11}
                   alt="부동산 개발 프로젝트 1"
                 />
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
+                  src={business12}
                   alt="부동산 개발 프로젝트 2"
                 />
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
+                src={business13}
                   alt="부동산 개발 프로젝트 3"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
-                  alt="부동산 개발 프로젝트 4"
                 />
               </SliderContainer>
             </ImageSlider>
@@ -90,20 +96,12 @@ function Businesses() {
             <ImageSlider>
               <SliderContainer>
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/2bf145e56026a10ba3dc7e88b864fc3be49ef843?width=720"
+                  src={business21}
                   alt="프롭테크 솔루션 1"
                 />
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
+                  src={business22}
                   alt="프롭테크 솔루션 2"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="프롭테크 솔루션 3"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="프롭테크 솔루션 4"
                 />
               </SliderContainer>
             </ImageSlider>
@@ -127,20 +125,12 @@ function Businesses() {
             <ImageSlider>
               <SliderContainer>
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/2bf145e56026a10ba3dc7e88b864fc3be49ef843?width=720"
+                  src={business31}
                   alt="라이프스타일 숙소 1"
                 />
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
+                  src={business32}
                   alt="라이프스타일 숙소 2"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="라이프스타일 숙소 3"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="라이프스타일 숙소 4"
                 />
               </SliderContainer>
             </ImageSlider>
@@ -152,20 +142,12 @@ function Businesses() {
             <ImageSlider>
               <SliderContainer>
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/2bf145e56026a10ba3dc7e88b864fc3be49ef843?width=720"
+                  src={business41}
                   alt="금융투자 1"
                 />
                 <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fc6c7232c273cd1b99dd912cd15c58edca6a42d0?width=720"
+                  src={business42}
                   alt="금융투자 2"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="금융투자 3"
-                />
-                <BusinessImage
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=720"
-                  alt="금융투자 4"
                 />
               </SliderContainer>
             </ImageSlider>

@@ -114,7 +114,7 @@ const Footer = () => {
               구성원 소개
             </div>
             <div className="footer-link" onClick={() => handleNavigation("/businesses")}>주요업무</div>
-            <div className="footer-link">프로젝트</div>
+            <div className="footer-link" onClick={() => handleNavigation("/projects")}>프로젝트</div>
             <div
               className="footer-link"
               onClick={() => handleNavigation("/disclosures")}
