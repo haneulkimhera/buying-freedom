@@ -1,7 +1,8 @@
 .footer {
   display: flex;
   width: 100%;
-  height: 388px;
+  /* height: 388px; */
+  background: #1e293b;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -16,11 +17,12 @@
   gap: 40px;
   flex-shrink: 0;
   background: #1e293b;
-  height: 388px;
+  /* height: 388px; */
 }
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1280px;
   justify-content: space-between;
@@ -185,8 +187,8 @@
 }
 
 .contact-item {
-  display: flex;
-  align-items: flex-start;
+  /* display: flex; */
+  /* align-items: flex-start; */
   gap: 8px;
   align-self: stretch;
   position: relative;
@@ -269,4 +271,30 @@
 
 .footer-bottom-link:hover {
   color: #94a3b8;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .company-info,
+  .quick-links,
+  .contact-info {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .company-description {
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

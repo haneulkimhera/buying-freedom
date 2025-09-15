@@ -34,7 +34,8 @@ const ServicesTitle = styled.h2`
 `;
 
 const ServicesDescription = styled.p`
-  width: 998px;
+  width: 100%;
+  max-width: 998px;
   color: #64748b;
   text-align: center;
   font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
@@ -46,9 +47,10 @@ const ServicesDescription = styled.p`
 
 const ServicesRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 20px;
   position: relative;
@@ -56,7 +58,8 @@ const ServicesRow = styled.div`
 
 const ServiceCard = styled.div`
   display: flex;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 280px;
   padding: 32px;
   flex-direction: column;

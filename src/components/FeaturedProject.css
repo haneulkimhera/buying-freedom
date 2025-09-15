@@ -11,7 +11,8 @@
 
 .project-header {
   display: flex;
-  width: 800px;
+  width: 100%;
+  max-width: 800px; /* 최대 폭 제한 */
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -52,19 +53,21 @@
   position: relative;
 }
 
-.project-content {
+.featured-project-content {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1280px;
-  height: 400px;
   align-items: flex-start;
-  gap: 60px;
+  justify-content: center;
+  gap: 100px;
   position: relative;
 }
 
 .project-image {
   display: flex;
-  width: 600px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
   flex-direction: column;
   justify-content: center;
@@ -89,9 +92,11 @@
   position: relative;
 }
 
-.project-info {
+.featured-project-info {
   display: flex;
-  width: 620px;
+  width: 100%;
+  max-width: 530px;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -209,4 +214,37 @@
   font-weight: 700;
   line-height: 16.8px;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .featured-project {
+    flex-direction: column; /* 세로로 쌓기 */
+    align-items: center;
+    gap: 12px;
+  }
+
+  .project-main-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .project-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .project-image {
+    width: auto;
+    max-width: 400px;
+  }
+
+  .project-info {
+    max-width: 100%; /* 화면 폭 꽉 채움 */
+  }
 }

@@ -11,11 +11,11 @@ const FeaturedProject = () => {
           현재 운영 중인 대표 프로젝트를 소개합니다
         </div>
       </div>
-      <div className="project-content">
+      <div className="featured-project-content">
         <div className="project-image">
           <img src={projectThumbnail} alt="프로젝트 썸네일" className="project-thumbnail"/>
         </div>
-        <div className="project-info">
+        <div className="featured-project-info">
           <div className="project-details">
             <div className="project-title">프리미엄 오피스 빌딩 "The 853"</div>
             <div className="project-description">
@@ -103,9 +103,6 @@ const FeaturedProject = () => {
                 <div className="stat-text">래미안 원페를라 아파트 앞</div>
               </div>
             </div>
-          </div>
-          <div className="project-cta">
-            <span className="cta-text">자세히 보기</span>
           </div>
         </div>
       </div>
