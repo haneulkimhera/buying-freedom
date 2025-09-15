@@ -2,7 +2,15 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Contact.css";
+
 import mapImage from '../assets/contact/map.png';
+import mainBuilding from "../assets/contact/building1.jpeg";
+import subBuilding1 from "../assets/contact/building2.jpeg";
+import subBuilding2 from "../assets/contact/building3.jpeg";
+import subBuilding3 from "../assets/contact/building4.jpeg";
+import subBuilding4 from "../assets/contact/building5.jpeg";
+import subBuilding5 from "../assets/contact/building6.jpeg";
+import subBuilding6 from "../assets/contact/building7.jpeg";
 
 const Contact = () => {
   return (
@@ -47,8 +55,8 @@ const Contact = () => {
               </div>
               <div className="card-content">
                 <h3 className="card-title">연락처</h3>
-                <p className="contact-phone">전화: 02-1234-5678</p>
-                <p className="contact-email">이메일: info@buyingfreedom.co.kr</p>
+                <p className="contact-phone">전화: 010-3284-0425</p>
+                <p className="contact-email">이메일: mdkhp@naver.com</p>
               </div>
             </div>
 
@@ -111,7 +119,7 @@ const Contact = () => {
                   </div>
                   <div className="subway-line">
                     <div className="line-badge line-7">7</div>
-                    <span className="line-description">내��역 1번 출구 도보 8분</span>
+                    <span className="line-description">내방역 1번 출구 도보 8분</span>
                   </div>
                 </div>
               </div>
@@ -156,7 +164,7 @@ const Contact = () => {
                   <h3 className="parking-title">건물 내 주차장</h3>
                 </div>
                 <div className="parking-details-content">
-                  <p className="parking-detail">지하 1층 주차장 이용 가능</p>
+                  <p className="parking-detail">지상 1층 주차장 이용 가능</p>
                   <p className="parking-detail">방문객 전용 주차구역 운영</p>
                   <p className="parking-detail">주차요금: 시간당 2,000원</p>
                 </div>
@@ -183,54 +191,37 @@ const Contact = () => {
         <div className="building-photo-section">
           <div className="photo-header">
             <h2 className="section-title">건물 외관</h2>
-            <p className="section-description">방문 시 참고하실 수 있도록 건물 외관 사진입니다</p>
+            <p className="section-description">방문 시 건물 외관 사진을 참고해주세요</p>
           </div>
           <div className="building-photos">
             <div className="main-photo">
               <div className="photo-placeholder">
-                <svg className="building-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M36 4H12C9.79086 4 8 5.79086 8 8V40C8 42.2091 9.79086 44 12 44H36C38.2091 44 40 42.2091 40 40V8C40 5.79086 38.2091 4 36 4Z" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M18 44V36H30V44" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M16 12H16.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M32 12H32.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M24 12H24.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M24 20H24.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M24 28H24.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M32 20H32.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M32 28H32.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M16 20H16.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M16 28H16.02" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <p className="photo-placeholder-text">건물 정면 사진</p>
+                <img src={mainBuilding} alt="건물 메인 외관" className="photo-main-img" />
               </div>
             </div>
             <div className="detail-photos">
               <div className="photo-row">
                 <div className="photo-item">
-                  <svg className="camera-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src={subBuilding1} alt="건물 외관 상세 1" className="photo-img" />
                 </div>
                 <div className="photo-item">
-                  <svg className="camera-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src={subBuilding2} alt="건물 외관 상세 2" className="photo-img" />
                 </div>
               </div>
               <div className="photo-row">
                 <div className="photo-item">
-                  <svg className="camera-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src={subBuilding3} alt="건물 외관 상세 3" className="photo-img" />
                 </div>
                 <div className="photo-item">
-                  <svg className="camera-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src={subBuilding4} alt="건물 외관 상세 4" className="photo-img" />
+                </div>
+              </div>
+              <div className="photo-row">
+                <div className="photo-item">
+                  <img src={subBuilding5} alt="건물 외관 상세 5" className="photo-img" />
+                </div>
+                <div className="photo-item">
+                  <img src={subBuilding6} alt="건물 외관 상세 6" className="photo-img" />
                 </div>
               </div>
             </div>
