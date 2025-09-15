@@ -466,6 +466,11 @@
     height: auto;
     min-height: 72px;
   }
+
+  .header-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
   
   .item-row {
     flex-direction: column;
