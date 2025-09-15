@@ -466,8 +466,7 @@
     height: auto;
     min-height: 72px;
   }
-
-  .header-row,
+  
   .item-row {
     flex-direction: column;
     gap: 8px;
