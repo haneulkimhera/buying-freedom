@@ -467,29 +467,45 @@
     min-height: 72px;
   }
 
-  .header-row,
+  .header-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .header-cell {
+    width: auto;
+    flex: 1; /* 각 셀이 같은 비율로 공간 차지 */
+    align-items: flex-end;
+  }
+
+  .title-header {
+    flex: 2; /* 제목은 조금 더 넓게 */
+  }
+
   .item-row {
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
     align-items: flex-start;
     padding: 16px 0;
   }
 
-  .header-cell,
   .item-cell {
-    width: 100%;
-    text-align: left;
+    width: auto;
+    flex: 2;
+    align-items: flex-end;
   }
 
   .date-cell,
   .type-cell,
   .download-cell {
-    text-align: left;
+    width: auto;
+    flex: 1;
   }
 
   .file-type,
   .download-button {
-    justify-content: flex-start;
+    width: auto;
+    flex: 1;
   }
 
   .year-dropdown {
