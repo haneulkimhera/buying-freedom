@@ -42,8 +42,8 @@ const Contact = () => {
               </div>
               <div className="card-content">
                 <h3 className="card-title">주소</h3>
-                <p className="address-main">서울시 서초구 방배동 853-3번지</p>
-                <p className="address-postal">우편번호: 06579</p>
+                <p className="address-main">경상남도 창원시 성산구<br />원이대로 863번길 19<br />203동 2004호</p>
+                <p className="address-postal">우편번호: 51485</p>
               </div>
             </div>
 
