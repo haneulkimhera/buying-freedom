@@ -199,7 +199,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="copyright">
-            © 2024 Buying Freedom. All rights reserved.
+            © 2023 Buying Freedom. All rights reserved.
           </div>
           <div className="footer-links">
             <div className="footer-bottom-link">개인정보처리방침</div>
