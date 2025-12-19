@@ -61,12 +61,12 @@ const Team = () => {
                       강남권 프리미엄 부동산 전문
                     </span>
                   </div>
-                  <div className="experience-item">
+                  {/* <div className="experience-item">
                     <CheckIcon className="check-icon" />
                     <span className="experience-text">
                       창원 메트로병원장
                     </span>
-                  </div>
+                  </div> */}
                   <div className="experience-item">
                     <CheckIcon className="check-icon" />
                     <span className="experience-text">
