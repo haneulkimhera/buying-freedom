@@ -148,7 +148,7 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="contact-text">경상남도 창원시 성산구 원이대로 863번길 19<br />203동 2004호</div>
+              {/* <div className="contact-text"><br /></div> */}
             </div>
             <div className="contact-item">
               <svg
@@ -167,7 +167,7 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="contact-text">010-3284-0425</div>
+              {/* <div className="contact-text"><br /></div> */}
             </div>
             <div className="contact-item">
               <svg
